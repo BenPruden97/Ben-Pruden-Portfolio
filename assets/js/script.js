@@ -24,20 +24,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-// Navbar Active Class
-
-const links = document.querySelectorAll(".links");
-const section = document.querySelectorAll("section");
-
-function activePage() {
-  let len = section.length;
-  while (--len && window.scrollY + 120 < section[len].offsetTop) {}
-  links.forEach((ltx) => ltx.classList.remove("active"));
-  links[len].classList.add("active");
-}
-activePage();
-window.addEventListener("scroll", activePage);
-
 // Burger Menu Section
 
 const burgerMenuIcon = document.querySelector(".burger-menu-icon");
