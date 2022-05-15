@@ -57,7 +57,7 @@ document
 // Remove Menu once Social Link is clicked
 
 document
-  .querySelectorAll(".burger-menu-section .social-links ul li a")
+  .querySelectorAll(".burger-menu-section .nav-buttons ul li a")
   .forEach((n) =>
     n.addEventListener("click", () => {
       burgerMenuIcon.classList.remove("show");

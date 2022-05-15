@@ -24,7 +24,7 @@ html {
 .btn-top {
   display: none;
   position: fixed;
-  bottom: 150px;
+  bottom: 230px;
   right: -25px;
   z-index: 99;
   font-size: 1.25rem;
@@ -66,8 +66,7 @@ html {
           align-items: center;
   height: 100px;
   width: 100%;
-  background-color: #fff;
-  border-bottom: 1px solid #191919;
+  background-color: #191919;
   z-index: 5;
 }
 
@@ -86,13 +85,13 @@ html {
 
 .logo a {
   text-decoration: none;
-  color: #191919;
+  color: #ea3057;
   font-size: 2rem;
   font-weight: 500;
 }
 
 .logo a:hover {
-  color: #ea3057;
+  color: #bebebe;
 }
 
 .nav-links {
@@ -150,17 +149,39 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   text-decoration: none;
   color: #ea3057;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
 .nav-links ul li a:hover {
-  color: #191919;
+  color: #bebebe;
 }
 
-.social-links {
+.nav-links ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: auto;
+  left: 0;
+  height: 3px;
+  width: 0;
+}
+
+.nav-links ul li a:hover::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #ea3057;
+  color: #bebebe;
+  -webkit-transition: ease 0.15s;
+  transition: ease 0.15s;
+}
+
+.nav-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,7 +194,7 @@ html {
   padding-right: 3rem;
 }
 
-.social-links ul li button {
+.nav-buttons ul li button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,25 +205,22 @@ html {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
-  background-color: #191919;
-  border: 2px solid #191919;
+  background-color: #ea3057;
+  border: none;
   border-radius: 10px;
   color: #fff;
   height: 50px;
   width: 150px;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  outline: none;
-  -webkit-transition: none;
-  transition: none;
 }
 
-.social-links ul li button:hover {
-  background-color: #ea3057;
-  border: none;
+.nav-buttons ul li button:hover {
+  background-color: #bebebe;
+  color: #ea3057;
 }
 
-.social-links ul {
+.nav-buttons ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -216,7 +234,7 @@ html {
   padding-left: 0;
 }
 
-.social-links ul li {
+.nav-buttons ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,6 +250,11 @@ html {
   height: 100px;
   cursor: pointer;
   position: relative;
+}
+
+div#staticBackdrop.modal.fade {
+  -webkit-transition: none;
+  transition: none;
 }
 
 div#staticBackdrop.modal.fade.show {
@@ -258,6 +281,11 @@ div#staticBackdrop.modal.fade.show {
 
 .btn-close {
   font-size: 1.5rem;
+}
+
+.btn-close:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .modal-content {
@@ -322,16 +350,94 @@ div#staticBackdrop.modal.fade.show {
           flex-direction: column;
 }
 
+.home-info h1 {
+  color: #ea3057;
+  font-size: 4.5rem;
+  text-align: center;
+}
+
 .home-info h3 {
   color: #191919;
   font-size: 3.5rem;
   text-align: center;
 }
 
-.home-info h1 {
+.social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5rem 0 1rem;
+}
+
+.social-icons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.social-icons ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+  width: 150px;
+  margin: 0 1rem;
+}
+
+.social-icons ul li a,
+.social-icons ul li button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 85px;
+  width: 150px;
+  background-color: #191919;
+  border: 2px solid #191919;
+  border-radius: 10px;
+  text-decoration: none;
   color: #ea3057;
-  font-size: 4.5rem;
-  text-align: center;
+}
+
+.social-icons ul li a:hover,
+.social-icons ul li button:hover {
+  color: #bebebe;
+}
+
+.social-icons ul li a i,
+.social-icons ul li button i {
+  font-size: 1.5rem;
+  padding-bottom: 0.25rem;
 }
 
 .arrow {
@@ -414,8 +520,8 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .arrow i:hover {
-  background-color: #ea3057;
-  color: #fff;
+  color: #191919;
+  border: 2px solid #ea3057;
 }
 
 /* ----- HOME PAGE STYLING END ----- */
@@ -434,7 +540,7 @@ div#staticBackdrop.modal.fade.show {
 
 #about {
   padding-top: 4rem;
-  background: #191919;
+  background: #bebebe;
   height: 75vh;
   width: 50vw;
   padding-bottom: 3rem;
@@ -457,138 +563,11 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .about-heading h1 {
-  color: #fff;
+  color: #191919;
 }
 
 .about-heading h5 {
   color: #ea3057;
-}
-
-.hobbie-heading {
-  color: #ea3057;
-  text-align: center;
-  margin-top: 4rem;
-  margin-bottom: 1rem;
-}
-
-.gaming-coding {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  font-size: 3rem;
-}
-
-.sport-music {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  font-size: 3rem;
-}
-
-.film-tv {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  font-size: 3rem;
-}
-
-.hobbie {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100px;
-  width: 200px;
-  border: 1px solid #ea3057;
-  border-radius: 10px;
-  padding: 0.75rem;
-  margin: 0.5rem;
-  color: #fff;
-}
-
-.hobbie img {
-  height: 65px;
-}
-
-.gaming h6 {
-  color: #ea3057;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  padding-top: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.coding img {
-  padding-top: 0.25rem;
-}
-
-.coding h6 {
-  color: #ea3057;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  font-size: 1.1rem;
-}
-
-.sports h6 {
-  color: #ea3057;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  padding-top: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.design h6 {
-  color: #ea3057;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  padding-top: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.tv h6 {
-  color: #ea3057;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  padding-top: 0.5rem;
-  font-size: 1rem;
-}
-
-.music h6 {
-  color: #ea3057;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  padding-top: 0.5rem;
-  font-size: 1.1rem;
 }
 
 .about-content {
@@ -632,7 +611,7 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .about-content p {
-  color: #fff;
+  color: #191919;
 }
 
 .about-content span {
@@ -1214,6 +1193,28 @@ div#staticBackdrop.modal.fade.show {
   color: #ea3057;
 }
 
+.contact-heading h6 {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.contact-heading button {
+  margin-top: 1.25rem;
+  height: 75px;
+  width: 250px;
+  border: 2px solid #ea3057;
+  border-radius: 10px;
+  color: #ea3057;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.contact-heading button:hover {
+  border-color: #191919;
+  color: #191919;
+}
+
 .contact-info-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1459,20 +1460,20 @@ footer p {
     font-size: 1.5rem;
   }
   .nav-links ul li,
-  .social-links ul li {
+  .nav-buttons ul li {
     width: 90px;
   }
   .nav-links ul li a,
-  .social-links ul li a {
+  .nav-buttons ul li a {
     width: 90px;
     font-size: 1rem;
   }
   .nav-links ul li a:hover::before,
-  .social-links ul li a:hover::before {
+  .nav-buttons ul li a:hover::before {
     width: 90px;
   }
   .nav-links ul li a:hover::after,
-  .social-links ul li a:hover::after {
+  .nav-buttons ul li a:hover::after {
     width: 90px;
   }
 }
@@ -1482,20 +1483,20 @@ footer p {
     font-size: 1.25rem;
   }
   .nav-links ul li,
-  .social-links ul li {
+  .nav-buttons ul li {
     width: 75px;
   }
   .nav-links ul li a,
-  .social-links ul li a {
+  .nav-buttons ul li a {
     width: 75px;
     font-size: 0.9rem;
   }
   .nav-links ul li a:hover::before,
-  .social-links ul li a:hover::before {
+  .nav-buttons ul li a:hover::before {
     width: 75px;
   }
   .nav-links ul li a:hover::after,
-  .social-links ul li a:hover::after {
+  .nav-buttons ul li a:hover::after {
     width: 75px;
   }
   /* ----- About Page Styling ----- */
@@ -1647,13 +1648,13 @@ footer p {
     z-index: 3;
   }
   .nav-links,
-  .social-links {
+  .nav-buttons {
     display: none;
   }
   div.nav-links {
     padding-left: 0rem;
   }
-  div.social-links {
+  div.nav-buttons {
     padding-right: 0rem;
   }
   .burger-menu-icon {
@@ -1838,7 +1839,7 @@ footer p {
   .burger-menu-section .nav-links ul li a:hover::after {
     border: none;
   }
-  .burger-menu-section .social-links {
+  .burger-menu-section .nav-buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1852,7 +1853,7 @@ footer p {
     padding-bottom: 3rem;
     padding-left: 0;
   }
-  .burger-menu-section .social-links ul {
+  .burger-menu-section .nav-buttons ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1870,7 +1871,7 @@ footer p {
     margin-bottom: 0;
     padding-left: 0;
   }
-  .burger-menu-section .social-links ul li {
+  .burger-menu-section .nav-buttons ul li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1888,7 +1889,7 @@ footer p {
     cursor: pointer;
     position: relative;
   }
-  .burger-menu-section .social-links ul li a {
+  .burger-menu-section .nav-buttons ul li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1905,7 +1906,7 @@ footer p {
     font-size: 1.1rem;
     border: 1px solid #ea3057;
   }
-  .burger-menu-section .social-links ul li a:hover {
+  .burger-menu-section .nav-buttons ul li a:hover {
     color: #fff;
   }
   .nav-links ul li a::before {
@@ -1922,14 +1923,14 @@ footer p {
     width: 0;
     background-color: transparent;
   }
-  .social-links ul li a::before {
+  .nav-buttons ul li a::before {
     content: "";
     display: block;
     height: 0;
     width: 0;
     background-color: transparent;
   }
-  .social-links ul li a::after {
+  .nav-buttons ul li a::after {
     content: "";
     display: block;
     height: 0;
