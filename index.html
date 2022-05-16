@@ -38,49 +38,45 @@
 
   <header>
     <div class="container-fluid">
-
       <div class="row">
-
         <div class="col-12">
-
           <nav class="navigation-menu">
-
             <div class="logo">
-
               <a href="#home"><span>B</span>en <span>P</span>ruden</a>
-
             </div>
 
             <div class="nav-links">
-
               <ul>
+                <li class="links"><a href="#home">Home</a></li>
 
-                <li class="links"><a href="/#home">Home</a></li>
+                <li class="links"><a href="#about">About</a></li>
 
-                <li class="links"><a href="/#about">About</a></li>
-
-                <li class="links"><a href="/#skills">Skills</a></li>
-
-                <li class="links"><a href="/#portfolio">Portfolio</a></li>
-
+                <li class="links"><a href="#portfolio">Portfolio</a></li>
               </ul>
-
             </div>
 
             <div class="nav-buttons">
-
               <ul>
+                <li>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                  >
+                    Contact Me
+                  </button>
+                </li>
 
-                <li><button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                  Contact Me
-                </button></li>
-
-                <li><button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                  Download CV
-                </button></li>
-
+                <li>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                  >
+                    Download CV
+                  </button>
+                </li>
               </ul>
-
             </div>
 
             <button class="burger-menu-icon">
@@ -124,27 +120,34 @@
                 </ul>
               </div>
             </div>
-
           </nav>
-
         </div>
-
       </div>
-
     </div>
-
   </header>
 
-  <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <!-- Contact Form Modal -->
+  <div
+    class="modal fade"
+    id="staticBackdrop"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="staticBackdropLabel"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
         <div class="modal-body">
-
           <div class="col-12">
             <div class="contact-form-box">
               <h3>Contact Me</h3>
@@ -158,19 +161,18 @@
                       type="text"
                       id="name"
                       name="name"
-                      placeholder="Name"
+                      placeholder="Name*"
                       required
                     />
                   </div>
 
                   <div>
-                    <label for="email"
-                      ><i class="fas fa-envelope"></i></label
+                    <label for="email"><i class="fas fa-envelope"></i></label
                     ><input
                       type="email"
                       id="email"
                       name="email"
-                      placeholder="Email Address"
+                      placeholder="Email Address*"
                       required
                     />
                   </div>
@@ -181,7 +183,7 @@
                       type="text"
                       id="subject"
                       name="subject"
-                      placeholder="Subject"
+                      placeholder="Subject*"
                       required
                     />
                   </div>
@@ -205,43 +207,29 @@
             </div>
           </div>
         </div>
-      
       </div>
     </div>
   </div>
 
   <body>
-
     <button onclick="topFunction()" class="btn-top" title="Back To Top">
-
       <i class="fas fa-arrow-up"></i><span>Back to top</span>
-
     </button>
 
     <div class="container-fluid">
-
       <div class="row">
-
         <div class="col-12">
-
           <section id="home">
-
             <div class="col-12">
-
               <div class="home-section">
-
                 <div class="home-info">
-
                   <h1>Hi, My Name Is Ben Pruden</h1>
 
                   <h3>A Full Stack Web Developer</h3>
-
                 </div>
 
                 <div class="social-icons">
-
                   <ul>
-
                     <li>
                       <a href="https://github.com/BenPruden97" target="_blank">
                         <i class="fa-brands fa-github-square"></i>Github
@@ -249,13 +237,20 @@
                     </li>
 
                     <li>
-                      <a href="https://www.linkedin.com/in/ben-pruden/" target="_blank">
+                      <a
+                        href="https://www.linkedin.com/in/ben-pruden/"
+                        target="_blank"
+                      >
                         <i class="fa-brands fa-linkedin"></i>LinkedIn
                       </a>
                     </li>
 
                     <li>
-                      <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      <button
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"
+                      >
                         <i class="fa-brands fa-github-square"></i>Contact Me
                       </button>
                     </li>
@@ -265,9 +260,7 @@
                         <i class="fa-solid fa-download"></i>Download CV
                       </a>
                     </li>
-
                   </ul>
-
                 </div>
 
                 <div class="arrow">
@@ -279,75 +272,65 @@
             </div>
           </section>
 
-          <div class="about-skills-section">
+          <section id="about">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  <div class="about-heading">
+                    <h1>ABOUT ME</h1>
 
-            <section id="about">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="about-heading">
-                      <h1>ABOUT ME</h1>
-
-                      <h5>GET TO KNOW ME</h5>
-                    </div>
+                    <h5>GET TO KNOW ME</h5>
                   </div>
-
-                  <div class="col-12">
-                    <div class="about-content">
-                      <h4>A Bit More About Me!</h4>
-
-                      <p>
-                        My name is Ben Pruden and I have been learning web
-                        development for the past year and currently completing a
-                        Full Stack Web Development diploma with Code Institute.
-
-                        <br />
-                        <br />
-
-                        I also come from a marketing background with over 4 years
-                        worth of marketing experience working within many
-                        industries. I made the change from marketing to web
-                        development to learn a new skill and thought it was a good
-                        transition after working in various marketing roles.
-
-                        <br />
-                        <br />
-
-                        The thing I love the most about web development is being
-                        able to turn an idea and a blank canvas into a fully
-                        functioning website that people are able to use.
-
-                        <br />
-                        <br />
-
-                        <span>Let's work together on your next project!</span>
-                      </p>
-
-                      <div class="about-content-buttons">
-
-                        <a href="#contact">Contact Me</a>
-
-                      </div>
-
-                    </div>
-                    
-                  </div>
-
+                </div>
               </div>
 
-            </section>
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <div class="about-content">
+                    <h4>A Bit More About Me!</h4>
 
-            <section id="skills">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="skills-heading">
-                      <h1>MY SKILLS</h1>
+                    <p>
+                      My name is Ben Pruden and I have been learning web
+                      development for the past year and currently completing a
+                      Full Stack Web Development diploma with Code Institute.
 
-                      <h5>WHAT I HAVE WORKED WITH</h5>
+                      <br />
+                      <br />
+
+                      I also come from a marketing background with over 4 years
+                      worth of marketing experience working within many
+                      industries. I made the change from marketing to web
+                      development to learn a new skill and thought it was a good
+                      transition after working in various marketing roles.
+
+                      <br />
+                      <br />
+
+                      The thing I love the most about web development is being
+                      able to turn an idea and a blank canvas into a fully
+                      functioning website that people are able to use.
+
+                      <br />
+                      <br />
+
+                      <span>Let's work together on your next project!</span>
+                    </p>
+
+                    <div class="about-content-buttons">
+                      <li>
+                        <button
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#staticBackdrop"
+                        >
+                          Contact Me
+                        </button>
+                      </li>
                     </div>
                   </div>
+                </div>
 
+                <div class="col-12 col-lg-6">
                   <div class="col-12">
                     <div class="icon-container">
                       <div class="icon">
@@ -372,14 +355,6 @@
                         </div>
 
                         <div class="icon-text">JavaScript</div>
-                      </div>
-
-                      <div class="icon">
-                        <div class="icon-icon">
-                          <i class="devicon-jquery-plain"></i>
-                        </div>
-
-                        <div class="icon-text">Jquery</div>
                       </div>
                     </div>
                   </div>
@@ -408,14 +383,6 @@
                         </div>
 
                         <div class="icon-text">Mongo DB</div>
-                      </div>
-
-                      <div class="icon">
-                        <div class="icon-icon">
-                          <i class="devicon-git-plain"></i>
-                        </div>
-
-                        <div class="icon-text">Git</div>
                       </div>
                     </div>
                   </div>
@@ -448,6 +415,26 @@
 
                         <div class="icon-text">Adobe Suite</div>
                       </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="icon-container">
+                      <div class="icon">
+                        <div class="icon-icon">
+                          <i class="devicon-git-plain"></i>
+                        </div>
+
+                        <div class="icon-text">Git</div>
+                      </div>
+
+                      <div class="icon">
+                        <div class="icon-icon">
+                          <i class="devicon-jquery-plain"></i>
+                        </div>
+
+                        <div class="icon-text">Jquery</div>
+                      </div>
 
                       <div class="icon">
                         <div class="icon-responsive">
@@ -461,12 +448,10 @@
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
-            </section>
-
-          </div>
+            </div>
+          </section>
 
           <section id="portfolio">
             <div class="container-fluid">
@@ -710,54 +695,42 @@
           </section>
 
           <section id="contact">
-
             <div class="container-fluid">
-
               <div class="row">
-
                 <div class="col-12">
-
                   <div class="contact-heading">
-
                     <h1>CONTACT ME</h1>
 
                     <h5>LET'S WORK TOGETHER</h5>
 
-                    <h6>Have a project in mind? Drop me a message and lets get started</h6>
+                    <h6>
+                      Have a project in mind? Drop me a message and lets get
+                      started
+                    </h6>
 
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <button
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"
+                    >
                       Hire Me
                     </button>
-
                   </div>
-
                 </div>
-
               </div>
-
             </div>
-
           </section>
 
           <footer>
-
             <p>
-
               <i class="fa-regular fa-copyright"></i> 2022 | Designed & coded by
               Ben Pruden
-
             </p>
-
           </footer>
-
         </div>
-
       </div>
-
     </div>
 
     <script src="assets/js/script.js"></script>
-
   </body>
-
 </html>
