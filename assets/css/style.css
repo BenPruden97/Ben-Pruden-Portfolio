@@ -49,6 +49,10 @@ html {
   margin-left: 0.75rem;
 }
 
+header {
+  background-color: #1b1c25;
+}
+
 .burger-menu-icon,
 .burger-menu-section {
   display: none;
@@ -66,7 +70,6 @@ html {
           align-items: center;
   height: 100px;
   width: 100%;
-  background-color: #191919;
   z-index: 5;
 }
 
@@ -80,18 +83,34 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 3rem;
+  position: relative;
+  height: 100px;
 }
 
 .logo a {
   text-decoration: none;
-  color: #ea3057;
+  color: #9fd2cb;
   font-size: 2rem;
   font-weight: 500;
 }
 
-.logo a:hover {
-  color: #fff;
+.logo::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 0;
+}
+
+.logo:hover::before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: #fff;
+  -webkit-transition: ease 0.15s;
+  transition: ease 0.15s;
 }
 
 .nav-links {
@@ -104,7 +123,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 5rem;
 }
 
 .nav-links ul {
@@ -153,20 +171,15 @@ html {
   text-decoration: none;
   width: 150px;
   height: 100px;
-  color: #ea3057;
+  color: #9fd2cb;
   font-size: 1.2rem;
   font-weight: 600;
-}
-
-.nav-links ul li a:hover {
-  color: #fff;
 }
 
 .nav-links ul li a::before {
   content: "";
   position: absolute;
   bottom: 0;
-  right: auto;
   left: 0;
   height: 5px;
   width: 0;
@@ -177,8 +190,7 @@ html {
   display: block;
   height: 5px;
   width: 100%;
-  background-color: #ea3057;
-  color: #fff;
+  background-color: #fff;
   -webkit-transition: ease 0.15s;
   transition: ease 0.15s;
 }
@@ -193,33 +205,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 3rem;
-}
-
-.nav-buttons ul li button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-decoration: none;
-  background-color: #ea3057;
-  border: none;
-  border-radius: 10px;
-  color: #fff;
-  height: 50px;
-  width: 150px;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.nav-buttons ul li button:hover {
-  background-color: #fff;
-  color: #ea3057;
 }
 
 .nav-buttons ul {
@@ -248,10 +233,35 @@ html {
           align-items: center;
   list-style-type: none;
   text-align: center;
-  width: 175px;
+  width: 140px;
   height: 100px;
   cursor: pointer;
   position: relative;
+}
+
+.nav-buttons ul li button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  background-color: #9fd2cb;
+  border: none;
+  border-radius: 10px;
+  color: #191919;
+  height: 50px;
+  width: 125px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.nav-buttons ul li button:hover {
+  background-color: #fff;
 }
 
 div#staticBackdrop.modal.fade {
@@ -277,32 +287,37 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .modal-header {
-  padding-top: 2.5rem;
-  padding-right: 2.5rem;
+  padding-top: 1.5rem;
+  padding-right: 3rem;
+  padding-bottom: 0rem;
+  border-bottom: none;
 }
 
-.btn-close {
-  font-size: 1.5rem;
+.modal-close {
+  font-size: 2.5rem;
+  background: none;
+  color: #fff;
+  border: none;
 }
 
-.btn-close:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.modal-close:hover {
+  color: #ea3057;
 }
 
 .modal-content {
   width: 750px;
-  border: 2px solid #ea3057;
+  border: 2px solid #fff;
   border-radius: 10px;
   outline: none;
-  background-color: #fff;
+  background-color: #1b1c25;
 }
 
 .modal-body h3 {
-  color: #191919;
+  font-size: 2.25rem;
+  color: #9fd2cb;
   text-transform: uppercase;
   padding-top: 1rem;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
 }
 
 .modal-body h4 {
@@ -311,14 +326,6 @@ div#staticBackdrop.modal.fade.show {
 }
 
 #home {
-  position: relative;
-  background: #fff;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-}
-
-.home-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,12 +335,11 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100vh;
+  position: relative;
+  background: #1b1c25;
   width: 100%;
+  height: 100vh;
+  z-index: 1;
 }
 
 .home-info {
@@ -350,6 +356,7 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 1.5rem;
 }
 
 .home-info h1 {
@@ -359,7 +366,7 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .home-info h3 {
-  color: #191919;
+  color: #9fd2cb;
   font-size: 3.5rem;
   text-align: center;
 }
@@ -424,16 +431,17 @@ div#staticBackdrop.modal.fade.show {
           flex-direction: column;
   height: 85px;
   width: 150px;
-  background-color: #191919;
-  border: 2px solid #191919;
+  background-color: #9fd2cb;
+  border: 2px solid #9fd2cb;
   border-radius: 10px;
   text-decoration: none;
-  color: #ea3057;
+  color: #1b1c25;
 }
 
 .social-icons ul li a:hover,
 .social-icons ul li button:hover {
-  color: #fff;
+  border-color: #fff;
+  background-color: #fff;
 }
 
 .social-icons ul li a i,
@@ -469,12 +477,16 @@ div#staticBackdrop.modal.fade.show {
 
 .arrow i {
   color: #ea3057;
-  border: 2px solid #191919;
+  border: 2px solid #fff;
   border-radius: 50%;
   padding: 1rem 1.15rem;
   margin-top: 1.5rem;
   -webkit-animation: bounce 2s infinite;
           animation: bounce 2s infinite;
+}
+
+.arrow i:hover {
+  background-color: #fff;
 }
 
 @-webkit-keyframes bounce {
@@ -521,15 +533,11 @@ div#staticBackdrop.modal.fade.show {
   }
 }
 
-.arrow i:hover {
-  background-color: #191919;
-}
-
 /* ----- HOME PAGE STYLING END ----- */
 /* ----- ABOUT PAGE STYLING START ----- */
 #about {
   padding-top: 4rem;
-  background: #333;
+  background: #9fd2cb;
   padding-bottom: 3rem;
 }
 
@@ -550,7 +558,7 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .about-heading h1 {
-  color: #fff;
+  color: #191919;
 }
 
 .about-heading h5 {
@@ -1119,11 +1127,11 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .portfolio-heading h1 {
-  color: #fff;
+  color: #ea3057;
 }
 
 .portfolio-heading h5 {
-  color: #ea3057;
+  color: #9fd2cb;
   margin-bottom: 2rem;
 }
 
@@ -1161,8 +1169,8 @@ div#staticBackdrop.modal.fade.show {
   border-radius: 10px;
   -webkit-transform: translateX(75px);
           transform: translateX(75px);
-  -webkit-box-shadow: 0 0 1em #fff;
-          box-shadow: 0 0 1em #fff;
+  -webkit-box-shadow: 0 0 1em #ea3057;
+          box-shadow: 0 0 1em #ea3057;
 }
 
 .project-card-2 {
@@ -1184,8 +1192,8 @@ div#staticBackdrop.modal.fade.show {
   border-radius: 10px;
   -webkit-transform: translateX(-75px);
           transform: translateX(-75px);
-  -webkit-box-shadow: 0 0 1em #ea3057;
-          box-shadow: 0 0 1em #ea3057;
+  -webkit-box-shadow: 0 0 1em #9fd2cb;
+          box-shadow: 0 0 1em #9fd2cb;
 }
 
 .project-image-1,
@@ -1256,10 +1264,14 @@ div#staticBackdrop.modal.fade.show {
   border-bottom-right-radius: 10px;
 }
 
-.project-info-1 h3,
-.project-info-2 h3 {
+.project-info-1 h3 {
   padding-bottom: 0.5rem;
   color: #ea3057;
+}
+
+.project-info-2 h3 {
+  padding-bottom: 0.5rem;
+  color: #9fd2cb;
 }
 
 .project-info-1 h6,
@@ -1282,7 +1294,7 @@ div#staticBackdrop.modal.fade.show {
           align-items: center;
 }
 
-.info-icons div {
+.project-info-1 .info-icons div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1299,6 +1311,25 @@ div#staticBackdrop.modal.fade.show {
   width: 75px;
   text-align: center;
   color: #ea3057;
+}
+
+.project-info-2 .info-icons div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 75px;
+  text-align: center;
+  color: #9fd2cb;
 }
 
 .info-icons div i {
@@ -1328,12 +1359,24 @@ div#staticBackdrop.modal.fade.show {
   font-size: 1rem;
 }
 
-.info-buttons a {
+.project-info-1 .info-buttons a {
   display: block;
   width: 125px;
   text-decoration: none;
-  color: #fff;
-  border: 2px solid #fff;
+  color: #ea3057;
+  border: 2px solid #ea3057;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  margin: 1rem 0.5rem 0;
+}
+
+.project-info-2 .info-buttons a {
+  display: block;
+  width: 125px;
+  text-decoration: none;
+  color: #9fd2cb;
+  border: 2px solid #9fd2cb;
   padding: 0.5rem;
   border-radius: 5px;
   text-align: center;
@@ -1341,8 +1384,8 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .info-buttons a:hover {
-  border: 2px solid #ea3057;
-  color: #ea3057;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 /* ----- PORTFOLIO PAGE STYLING END ----- */
@@ -1370,7 +1413,7 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .contact-heading h1 {
-  color: #191919;
+  color: #1b1c25;
 }
 
 .contact-heading h5 {
@@ -1378,6 +1421,7 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .contact-heading h6 {
+  color: #1b1c25;
   margin-top: 2rem;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -1387,8 +1431,8 @@ div#staticBackdrop.modal.fade.show {
   margin-top: 1.25rem;
   height: 70px;
   width: 250px;
-  border: 2px solid #ea3057;
-  background-color: #ea3057;
+  border: 2px solid #1b1c25;
+  background-color: #1b1c25;
   border-radius: 10px;
   color: #fff;
   font-size: 1.25rem;
@@ -1396,8 +1440,8 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .contact-heading button:hover {
-  border-color: #ea3057;
-  color: #ea3057;
+  border-color: #1b1c25;
+  color: #1b1c25;
   background-color: #fff;
 }
 
@@ -1498,7 +1542,7 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .contact-form form label {
-  border: 2px solid #191919;
+  border: 2px solid #fff;
   border-right: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -1512,18 +1556,18 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .contact-form form label i {
-  color: #ea3057;
+  color: #fff;
 }
 
 .contact-form form input {
   background-color: transparent;
-  color: #191919;
-  border: 2px solid #191919;
+  color: #ea3057;
+  border: 2px solid #fff;
   border-top-right-radius: 10px;
   border-top-left-radius: 0;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 0;
-  border-bottom: 2px solid #191919;
+  border-bottom: 2px solid #fff;
   width: 500px;
   padding: 1rem;
   margin-bottom: 2rem;
@@ -1532,23 +1576,25 @@ div#staticBackdrop.modal.fade.show {
 
 .contact-form form input:focus,
 .contact-form form input:active {
-  border: 2px solid #ea3057 !important;
-  outline: #ea3057;
+  border: 2px solid #fff !important;
+  outline: #fff;
 }
 
 .contact-form form textarea:focus,
 .contact-form form textarea:active {
-  border: 2px solid #ea3057 !important;
-  outline: #ea3057;
+  border: 2px solid #fff !important;
+  outline: #fff;
 }
 
 .contact-form form textarea {
   background-color: transparent;
   color: #ea3057;
-  border: 2px solid #191919;
+  border: 2px solid #fff;
   border-radius: 10px;
   max-width: 555px;
   width: 555px;
+  max-height: 150px;
+  height: 150px;
   padding: 0.5rem;
   margin-bottom: 2rem;
   margin-left: 0;
@@ -1560,25 +1606,25 @@ div#staticBackdrop.modal.fade.show {
 
 .contact-form form input::-webkit-input-placeholder,
 .contact-form form textarea::-webkit-input-placeholder {
-  color: #ea3057;
+  color: #fff;
   font-size: 1rem;
 }
 
 .contact-form form input:-ms-input-placeholder,
 .contact-form form textarea:-ms-input-placeholder {
-  color: #ea3057;
+  color: #fff;
   font-size: 1rem;
 }
 
 .contact-form form input::-ms-input-placeholder,
 .contact-form form textarea::-ms-input-placeholder {
-  color: #ea3057;
+  color: #fff;
   font-size: 1rem;
 }
 
 .contact-form form input::placeholder,
 .contact-form form textarea::placeholder {
-  color: #ea3057;
+  color: #fff;
   font-size: 1rem;
 }
 
@@ -1598,8 +1644,8 @@ div#staticBackdrop.modal.fade.show {
 .contact-form-button button {
   width: 200px;
   padding: 1rem;
-  border: 2px solid #191919;
-  color: #191919;
+  border: 2px solid #9fd2cb;
+  color: #9fd2cb;
   background-color: transparent;
   border-radius: 10px;
   margin-bottom: 2rem;
