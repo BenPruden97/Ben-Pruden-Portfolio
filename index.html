@@ -28,6 +28,18 @@
       crossorigin="anonymous"
     ></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+
+      (function() {
+          emailjs.init("user_8vBZjxGRThwYy1BQa2nqH");
+      })();
+
+    </script>
+
     <!-- Bootstrap JS Link -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
@@ -59,6 +71,7 @@
               <ul>
                 <li>
                   <button
+                    class="nav-contact"
                     type="button"
                     data-bs-toggle="modal"
                     data-bs-target="#staticBackdrop"
@@ -69,6 +82,7 @@
 
                 <li>
                   <button
+                    class="nav-download"
                     type="button"
                     data-bs-toggle="modal"
                     data-bs-target="#staticBackdrop"
@@ -156,7 +170,7 @@
               <h4>Let's work together on your next project!</h4>
 
               <div class="contact-form">
-                <form action="#">
+                <form id="contact-form">
                   <div>
                     <label for="name"><i class="fas fa-user"></i></label
                     ><input
@@ -175,17 +189,6 @@
                       id="email"
                       name="email"
                       placeholder="Email Address*"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label for="subject"><i class="fas fa-pen"></i></label
-                    ><input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      placeholder="Subject*"
                       required
                     />
                   </div>
@@ -234,7 +237,7 @@
       </section>
 
       <section id="about">
-        <div class="container-fluid">
+        <div class="container">
           <div class="row">
             <div class="col-12">
               <div class="about-heading">
@@ -437,7 +440,7 @@
       </section>
 
       <section id="portfolio">
-        <div class="container-fluid">
+        <div class="container">
           <div class="row">
             <div class="col-12">
               <div class="portfolio-heading">
@@ -452,13 +455,6 @@
             <div class="col-12">
               <div class="project-row">
                 <div class="project-card-1">
-                  <div class="project-image-1">
-                    <img
-                      src="/assets/images/bp-fitness-portfolio-image.png"
-                      alt="BP Fitness Image"
-                    />
-                  </div>
-
                   <div class="project-info-1">
                     <h3>BP Fitness</h3>
 
@@ -469,32 +465,33 @@
                     </h6>
 
                     <div class="col-12">
-                      <div class="info-icons">
-                        <div>
-                          <h4><i class="fab fa-html5"></i></h4>
-                          <p>HTML5</p>
-                        </div>
+                      <div class="info-section">
+                        <div class="info-buttons">
+                          <a
+                            href="https://benpruden97.github.io/BP-Fitness-Project/"
+                            target="_blank"
+                            >View Project <i class="fa-solid fa-up-right-from-square"></i></a
+                          >
 
-                        <div>
-                          <h4><i class="fab fa-css3-alt"></i></h4>
+                          <a
+                            href="https://github.com/BenPruden97/BP-Fitness-Project"
+                            target="_blank"
+                            ><i class="fab fa-github"></i> Site Repo</a
+                          >
+                        </div>
+                        <div class="info-text">
+                          <p>HTML5</p>
                           <p>CSS3</p>
+                          <p>Bootstrap</p>
                         </div>
                       </div>
                     </div>
-
-                    <div class="info-buttons">
-                      <a
-                        href="https://benpruden97.github.io/BP-Fitness-Project/"
-                        target="_blank"
-                        ><i class="fas fa-globe"></i> Live Site</a
-                      >
-
-                      <a
-                        href="https://github.com/BenPruden97/BP-Fitness-Project"
-                        target="_blank"
-                        ><i class="fab fa-github"></i> Site Repo</a
-                      >
-                    </div>
+                  </div>
+                  <div class="project-image-1">
+                    <img
+                      src="/assets/images/bp-fitness-portfolio-image.png"
+                      alt="BP Fitness Image"
+                    />
                   </div>
                 </div>
               </div>
@@ -503,13 +500,6 @@
             <div class="col-12">
               <div class="project-row">
                 <div class="project-card-2">
-                  <div class="project-image-2">
-                    <img
-                      src="/assets/images/mulitple-maths-portfolio-image.png"
-                      alt="Mulitple Maths Image"
-                    />
-                  </div>
-
                   <div class="project-info-2">
                     <h3>Multiple Maths</h3>
 
@@ -520,36 +510,34 @@
                       skills.
                     </h6>
 
-                    <div class="info-icons">
-                      <div>
-                        <h4><i class="fab fa-html5"></i></h4>
-                        <p>HTML5</p>
-                      </div>
+                    <div class="col-12">
+                      <div class="info-section">
+                        <div class="info-buttons">
+                          <a
+                            href="https://benpruden97.github.io/multiple-maths/"
+                            target="_blank"
+                            >View Project <i class="fa-solid fa-up-right-from-square"></i></a
+                          >
 
-                      <div>
-                        <h4><i class="fab fa-css3-alt"></i></h4>
-                        <p>CSS3</p>
-                      </div>
-
-                      <div>
-                        <h4><i class="fab fa-js-square"></i></h4>
-                        <p>JavaScript</p>
+                          <a
+                            href="https://github.com/BenPruden97/multiple-maths"
+                            target="_blank"
+                            ><i class="fab fa-github"></i> Site Repo</a
+                          >
+                        </div>
+                        <div class="info-text">
+                            <p>HTML5</p>
+                            <p>CSS3</p>
+                            <p>JavaScript</p>
+                        </div>
                       </div>
                     </div>
-
-                    <div class="info-buttons">
-                      <a
-                        href="https://benpruden97.github.io/multiple-maths/"
-                        target="_blank"
-                        ><i class="fas fa-globe"></i> Live Site</a
-                      >
-
-                      <a
-                        href="https://github.com/BenPruden97/multiple-maths"
-                        target="_blank"
-                        ><i class="fab fa-github"></i> Site Repo</a
-                      >
-                    </div>
+                  </div>
+                  <div class="project-image-2">
+                    <img
+                      src="/assets/images/mulitple-maths-portfolio-image.png"
+                      alt="Mulitple Maths Image"
+                    />
                   </div>
                 </div>
               </div>
@@ -558,13 +546,6 @@
             <div class="col-12">
               <div class="project-row">
                 <div class="project-card-1">
-                  <div class="project-image-1">
-                    <img
-                      src="/assets/images/bp-workout-plan-portfolio-image.png"
-                      alt="BP Workout Plans Image"
-                    />
-                  </div>
-
                   <div class="project-info-1">
                     <h3>BP Workout Plans</h3>
 
@@ -574,41 +555,35 @@
                       workout plans.
                     </h6>
 
-                    <div class="info-icons">
-                      <div>
-                        <h4><i class="fab fa-html5"></i></h4>
-                        <p>HTML5</p>
+                    <div class="col-12">
+                      <div class="info-section">
+                        <div class="info-buttons">
+                          <a
+                            href="https://bp-workout-plans.herokuapp.com/"
+                            target="_blank"
+                            >View Project <i class="fa-solid fa-up-right-from-square"></i></a
+                          >
+    
+                          <a
+                            href="https://github.com/BenPruden97/BP-Workout-Plans"
+                            target="_blank"
+                            ><i class="fab fa-github"></i> Site Repo</a
+                          >
+                        </div>
+                        <div class="info-text">
+                            <p>HTML5</p>
+                            <p>CSS3</p>
+                            <p>JavaScript</p>
+                            <p>Python</p>
+                        </div>
                       </div>
-
-                      <div>
-                        <h4><i class="fab fa-css3-alt"></i></h4>
-                        <p>CSS3</p>
-                      </div>
-
-                      <div>
-                        <h4><i class="fab fa-js-square"></i></h4>
-                        <p>JavaScript</p>
-                      </div>
-
-                      <div>
-                        <h4><i class="fab fa-python"></i></h4>
-                        <p>Python</p>
-                      </div>
-                    </div>
-
-                    <div class="info-buttons">
-                      <a
-                        href="https://bp-workout-plans.herokuapp.com/"
-                        target="_blank"
-                        ><i class="fas fa-globe"></i> Live Site</a
-                      >
-
-                      <a
-                        href="https://github.com/BenPruden97/BP-Workout-Plans"
-                        target="_blank"
-                        ><i class="fab fa-github"></i> Site Repo</a
-                      >
-                    </div>
+                    </div>            
+                  </div>
+                  <div class="project-image-1">
+                    <img
+                      src="/assets/images/bp-workout-plan-portfolio-image.png"
+                      alt="BP Workout Plans Image"
+                    />
                   </div>
                 </div>
               </div>
@@ -617,13 +592,6 @@
             <div class="col-12">
               <div class="project-row">
                 <div class="project-card-2">
-                  <div class="project-image-2">
-                    <img
-                      src="/assets/images/identity-clothing-portfolio-image.png"
-                      alt="Identity Clothing Image"
-                    />
-                  </div>
-
                   <div class="project-info-2">
                     <h3>Identity Clothing</h3>
 
@@ -634,41 +602,34 @@
                       cart.
                     </h6>
 
-                    <div class="info-icons">
-                      <div>
-                        <h4><i class="fab fa-html5"></i></h4>
-                        <p>HTML5</p>
+                    <div class="col-12">
+                      <div class="info-section">
+                        <div class="info-buttons">
+                          <a
+                            href="https://identity-clothing.herokuapp.com/"
+                            target="_blank"
+                            >View Project <i class="fa-solid fa-up-right-from-square"></i></a
+                          >
+                          <a
+                            href="https://github.com/BenPruden97/Identity-Clothing"
+                            target="_blank"
+                            ><i class="fab fa-github"></i> Site Repo</a
+                          >
+                        </div>
+                        <div class="info-text">
+                            <p>HTML5</p>
+                            <p>CSS3</p>
+                            <p>JavaScript</p>
+                            <p>Django</p>
+                        </div>
                       </div>
-
-                      <div>
-                        <h4><i class="fab fa-css3-alt"></i></h4>
-                        <p>CSS3</p>
-                      </div>
-
-                      <div>
-                        <h4><i class="fab fa-js-square"></i></h4>
-                        <p>JavaScript</p>
-                      </div>
-
-                      <div>
-                        <h4><i class="devicon-django-plain"></i></h4>
-                        <p>Django</p>
-                      </div>
-                    </div>
-
-                    <div class="info-buttons">
-                      <a
-                        href="https://identity-clothing.herokuapp.com/"
-                        target="_blank"
-                        ><i class="fas fa-globe"></i> Live Site</a
-                      >
-
-                      <a
-                        href="https://github.com/BenPruden97/Identity-Clothing"
-                        target="_blank"
-                        ><i class="fab fa-github"></i> Site Repo</a
-                      >
-                    </div>
+                    </div>                    
+                  </div>
+                  <div class="project-image-2">
+                    <img
+                      src="/assets/images/identity-clothing-portfolio-image.png"
+                      alt="Identity Clothing Image"
+                    />
                   </div>
                 </div>
               </div>
@@ -712,5 +673,6 @@
       </footer>
 
     <script src="assets/js/script.js"></script>
+
   </body>
 </html>

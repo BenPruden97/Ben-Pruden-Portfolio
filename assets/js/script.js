@@ -1,29 +1,3 @@
-// Back To Top Button
-
-var mybutton = document.querySelector(".btn-top");
-
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 1000 ||
-    document.documentElement.scrollTop > 900
-  ) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
 // Burger Menu Section
 
 const burgerMenuIcon = document.querySelector(".burger-menu-icon");
@@ -65,3 +39,41 @@ document
       BurgerMenuOpen = false;
     })
   );
+
+// Email JS Contact Form Code
+
+form = document.querySelector("#contact-form");
+
+form.addEventListener("submit", function () {
+  event.preventDefault();
+  const target = event.target;
+
+  const templateParams = {
+    contact_name: target.name.value,
+    contact_email: target.email.value,
+    portfolio_message: target.message.value,
+  };
+
+  emailjs.send("gmail", "Portfolio", templateParams).then(
+    function (response) {
+      swal({
+        title: "Thank You!",
+        text: "Your message was sent successfully",
+        icon: "success",
+        button: false,
+        timer: 3500,
+      });
+      form.reset();
+    },
+    function (error) {
+      swal({
+        title: "Unfortunately Your Message Was Not Sent!",
+        text: "Please Try Again or Contact Us via our Contact Page!",
+        icon: "error",
+        button: false,
+        timer: 3500,
+      });
+      form.reset();
+    }
+  );
+});

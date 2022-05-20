@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700;900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -17,7 +17,7 @@ div.col-12 {
 }
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -27,8 +27,10 @@ header {
   left: 0;
   width: 100%;
   height: 100px;
-  background-color: #1b1c25;
+  background-color: #191919;
   z-index: 3;
+  -webkit-box-shadow: 0px 15px 10px -15px #fff;
+          box-shadow: 0px 15px 10px -15px #fff;
 }
 
 .burger-menu-icon,
@@ -61,18 +63,29 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
   height: 100px;
+  position: relative;
 }
 
 .logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
-  color: #9fd2cb;
+  color: #fff;
   font-size: 2rem;
+  height: 100px;
   font-weight: 500;
 }
 
-.logo::before {
+.logo a::before,
+.logo a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -81,14 +94,26 @@ header {
   width: 0;
 }
 
-.logo:hover::before {
+.logo a:hover::before {
   content: "";
   display: block;
   height: 5px;
   width: 100%;
-  background-color: #fff;
+  background-color: #ea3057;
   -webkit-transition: ease 0.15s;
   transition: ease 0.15s;
+}
+
+.logo a:hover::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: #9fd2cb;
+  -webkit-transition: ease 0.15s;
+  transition: ease 0.15s;
+  -webkit-transition-delay: 175ms;
+          transition-delay: 175ms;
 }
 
 .nav-links {
@@ -149,7 +174,7 @@ header {
   text-decoration: none;
   width: 150px;
   height: 100px;
-  color: #9fd2cb;
+  color: #fff;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -163,14 +188,35 @@ header {
   width: 0;
 }
 
+.nav-links ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 0;
+}
+
 .nav-links ul li a:hover::before {
   content: "";
   display: block;
   height: 5px;
   width: 100%;
-  background-color: #fff;
+  background-color: #ea3057;
   -webkit-transition: ease 0.15s;
   transition: ease 0.15s;
+}
+
+.nav-links ul li a:hover::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: #9fd2cb;
+  -webkit-transition: ease 0.15s;
+  transition: ease 0.15s;
+  -webkit-transition-delay: 175ms;
+          transition-delay: 175ms;
 }
 
 .nav-buttons {
@@ -217,17 +263,20 @@ header {
   position: relative;
 }
 
-.nav-buttons ul li button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-decoration: none;
+.nav-contact {
+  background-color: #ea3057;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  height: 50px;
+  width: 125px;
+  font-size: 1rem;
+  font-weight: 600;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.nav-download {
   background-color: #9fd2cb;
   border: none;
   border-radius: 10px;
@@ -236,10 +285,14 @@ header {
   width: 125px;
   font-size: 1rem;
   font-weight: 600;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-.nav-buttons ul li button:hover {
-  background-color: #fff;
+.nav-contact:hover,
+.nav-download:hover {
+  color: #fff;
+  background-color: #333;
 }
 
 div#staticBackdrop.modal.fade {
@@ -274,28 +327,32 @@ div#staticBackdrop.modal.fade.show {
 .modal-close {
   font-size: 2.5rem;
   background: none;
-  color: #ea3057;
+  color: #fff;
   border: none;
+}
+
+.modal-close:hover {
+  color: #ea3057;
 }
 
 .modal-content {
   width: 750px;
-  border: 2px solid #1b1c25;
+  border: 2px solid #fff;
   border-radius: 10px;
   outline: none;
-  background-color: #fff;
+  background-color: #191919;
 }
 
 .modal-body h3 {
   font-size: 2.25rem;
-  color: #1b1c25;
+  color: #9fd2cb;
   text-transform: uppercase;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
 
 .modal-body h4 {
-  color: #1b1c25;
+  color: #ea3057;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -311,7 +368,7 @@ div#staticBackdrop.modal.fade.show {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  background: #1b1c25;
+  background: #191919;
   height: 100vh;
   z-index: 1;
 }
@@ -338,14 +395,14 @@ div#staticBackdrop.modal.fade.show {
   color: #ea3057;
   margin-left: 0.3rem;
   margin-bottom: 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
   position: relative;
 }
 
 .home-info h1 {
   color: #fff;
-  font-size: 6.5rem;
-  height: 120px;
+  font-size: 6rem;
+  height: 110px;
   margin-bottom: 0rem;
   text-transform: uppercase;
   position: relative;
@@ -353,7 +410,7 @@ div#staticBackdrop.modal.fade.show {
 
 .home-info h3 {
   color: #9fd2cb;
-  font-size: 4.5rem;
+  font-size: 4rem;
   margin-left: 0.3rem;
   margin-bottom: 1.5rem;
 }
@@ -369,19 +426,22 @@ div#staticBackdrop.modal.fade.show {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
-  background-color: #9fd2cb;
+  background-color: #ea3057;
   border: none;
   border-radius: 10px;
-  color: #191919;
-  height: 75px;
-  width: 250px;
+  color: #fff;
+  height: 65px;
+  width: 200px;
   font-size: 1.25rem;
   font-weight: 600;
   margin-left: 0.3rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .home-info a:hover {
-  background-color: #fff;
+  background-color: #9fd2cb;
+  color: #191919;
 }
 
 .home-text {
@@ -404,7 +464,7 @@ div#staticBackdrop.modal.fade.show {
 /* ----- ABOUT PAGE STYLING START ----- */
 #about {
   padding-top: 6.5rem;
-  background: #fff;
+  background: #333;
   padding-bottom: 3rem;
 }
 
@@ -415,9 +475,9 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -425,12 +485,36 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .about-heading h1 {
-  color: #191919;
+  color: #9fd2cb;
+  font-size: 3rem;
+  position: relative;
 }
 
 .about-heading h5 {
   color: #ea3057;
   margin-bottom: 4rem;
+}
+
+.about-heading h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 110px;
+  left: 0;
+  width: 50%;
+  height: 5px;
+  background-color: #ea3057;
+}
+
+.about-heading h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 110px;
+  right: 0;
+  width: 50%;
+  height: 5px;
+  background-color: #9fd2cb;
 }
 
 .about-container {
@@ -473,7 +557,7 @@ div#staticBackdrop.modal.fade.show {
           flex-direction: column;
   margin-top: 4rem;
   padding: 5rem;
-  padding-left: 8rem;
+  padding-left: 0rem;
   padding-right: 5rem;
 }
 
@@ -541,8 +625,8 @@ div#staticBackdrop.modal.fade.show {
   height: 75px;
   width: 100px;
   text-decoration: none;
-  color: #1b1c25;
-  border: 2px solid #1b1c25;
+  color: #191919;
+  border: 2px solid #191919;
   padding: 1rem;
   border-radius: 5px;
   text-align: center;
@@ -561,8 +645,8 @@ div#staticBackdrop.modal.fade.show {
   height: 75px;
   width: 100px;
   text-decoration: none;
-  color: #1b1c25;
-  border: 2px solid #1b1c25;
+  color: #191919;
+  border: 2px solid #191919;
   padding: 1rem;
   border-radius: 5px;
   text-align: center;
@@ -570,8 +654,8 @@ div#staticBackdrop.modal.fade.show {
 
 .about-content-buttons a:hover,
 .about-content-buttons button:hover {
-  border: 2px solid #1b1c25;
-  background-color: #1b1c25;
+  border: 2px solid #191919;
+  background-color: #191919;
   color: #fff;
 }
 
@@ -927,26 +1011,50 @@ div#staticBackdrop.modal.fade.show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 2.5rem;
+  margin-left: 2rem;
 }
 
 .portfolio-heading h1 {
   color: #ea3057;
+  font-size: 3rem;
+  position: relative;
 }
 
 .portfolio-heading h5 {
   color: #9fd2cb;
   margin-bottom: 2rem;
+}
+
+.portfolio-heading h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 110px;
+  left: 0;
+  width: 50%;
+  height: 5px;
+  background-color: #ea3057;
+}
+
+.portfolio-heading h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 110px;
+  right: 0;
+  width: 50%;
+  height: 5px;
+  background-color: #9fd2cb;
 }
 
 .project-row {
@@ -975,16 +1083,11 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: 800;
-      -ms-flex: 800;
-          flex: 800;
-  max-width: 800px;
+  -webkit-box-flex: 1250;
+      -ms-flex: 1250;
+          flex: 1250;
+  max-width: 1250px;
   border: none;
-  border-radius: 10px;
-  -webkit-transform: translateX(75px);
-          transform: translateX(75px);
-  -webkit-box-shadow: 0 0 1em #ea3057;
-          box-shadow: 0 0 1em #ea3057;
 }
 
 .project-card-2 {
@@ -998,16 +1101,11 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: 800;
-      -ms-flex: 800;
-          flex: 800;
-  max-width: 800px;
+  -webkit-box-flex: 1250;
+      -ms-flex: 1250;
+          flex: 1250;
+  max-width: 1250px;
   border: none;
-  border-radius: 10px;
-  -webkit-transform: translateX(-75px);
-          transform: translateX(-75px);
-  -webkit-box-shadow: 0 0 1em #9fd2cb;
-          box-shadow: 0 0 1em #9fd2cb;
 }
 
 .project-image-1,
@@ -1021,8 +1119,6 @@ div#staticBackdrop.modal.fade.show {
   height: 350px;
   background-position: center;
   background-size: cover;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
 
 .project-image-2 img {
@@ -1030,130 +1126,127 @@ div#staticBackdrop.modal.fade.show {
   height: 350px;
   background-position: center;
   background-size: cover;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
 
 .project-info-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 400px;
-  height: 350px;
   background-color: transparent;
+  height: 350px;
   color: #fff;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  padding: 3.5rem;
+  background-color: #333;
+}
+
+.project-info-1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background-color: #ea3057;
 }
 
 .project-info-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 400px;
-  height: 350px;
   background-color: transparent;
-  border-left: none;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  height: 350px;
+  color: #fff;
+  padding: 3.5rem;
 }
 
-.project-info-1 h3 {
-  padding-bottom: 0.5rem;
-  color: #ea3057;
+.project-info-2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background-color: #9fd2cb;
 }
 
+.project-info-1 h3,
 .project-info-2 h3 {
   padding-bottom: 0.5rem;
-  color: #9fd2cb;
+  color: #fff;
+  font-size: 2.25rem;
 }
 
 .project-info-1 h6,
 .project-info-2 h6 {
-  padding: 0 1rem 1rem;
+  font-size: 1.2rem;
+  padding: 0;
   font-weight: 400;
-  text-align: center;
   color: #fff;
 }
 
-.info-icons {
+.info-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 1.5rem;
 }
 
-.project-info-1 .info-icons div {
+.project-info-1 .info-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 75px;
-  text-align: center;
-  color: #ea3057;
+  margin-top: 0.5rem;
 }
 
-.project-info-2 .info-icons div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 75px;
-  text-align: center;
-  color: #9fd2cb;
-}
-
-.info-icons div i {
-  font-size: 2rem;
-}
-
-.info-icons p {
-  margin: 0 1rem 0.5rem;
-  margin-bottom: 0.5rem;
+.project-info-1 .info-text p {
+  background-color: #191919;
+  border-radius: 5px;
+  padding: 0.5rem;
   color: #fff;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.project-info-2 .info-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.project-info-2 .info-text p {
+  background-color: #333;
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: #fff;
+  margin: 1rem 0.5rem 1rem 0.5rem;
 }
 
 .info-buttons {
@@ -1171,41 +1264,55 @@ div#staticBackdrop.modal.fade.show {
 
 .info-buttons a i {
   font-size: 1rem;
+  padding-left: 0.15rem;
 }
 
 .project-info-1 .info-buttons a {
   display: block;
-  width: 125px;
+  width: 160px;
   text-decoration: none;
-  color: #ea3057;
+  color: #fff;
   border: 2px solid #ea3057;
+  background-color: #ea3057;
   padding: 0.5rem;
   border-radius: 5px;
   text-align: center;
-  margin: 1rem 0.5rem 0;
+  margin: 1rem 0;
+  margin-right: 1rem;
+  text-transform: uppercase;
 }
 
 .project-info-2 .info-buttons a {
   display: block;
-  width: 125px;
+  width: 160px;
   text-decoration: none;
-  color: #9fd2cb;
+  color: #191919;
   border: 2px solid #9fd2cb;
+  background-color: #9fd2cb;
   padding: 0.5rem;
   border-radius: 5px;
   text-align: center;
-  margin: 1rem 0.5rem 0;
+  margin: 1rem 0;
+  margin-right: 1rem;
+  text-transform: uppercase;
 }
 
-.info-buttons a:hover {
-  border: 2px solid #fff;
+.project-info-1 .info-buttons a:hover {
+  border: 2px solid #191919;
+  background-color: #191919;
+  color: #fff;
+}
+
+.project-info-2 .info-buttons a:hover {
+  border: 2px solid #333;
+  background-color: #333;
   color: #fff;
 }
 
 /* ----- PORTFOLIO PAGE STYLING END ----- */
 /* ----- CONTACT PAGE STYLING START ----- */
 #contact {
-  background-color: #fff;
+  background-color: #333;
   padding-bottom: 3rem;
 }
 
@@ -1227,7 +1334,8 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .contact-heading h1 {
-  color: #1b1c25;
+  color: #9fd2cb;
+  font-size: 3rem;
 }
 
 .contact-heading h5 {
@@ -1235,7 +1343,7 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .contact-heading h6 {
-  color: #1b1c25;
+  color: #fff;
   margin-top: 2rem;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -1243,20 +1351,22 @@ div#staticBackdrop.modal.fade.show {
 
 .contact-heading button {
   margin-top: 1.25rem;
-  height: 70px;
-  width: 250px;
-  border: 2px solid #1b1c25;
-  background-color: #1b1c25;
+  height: 65px;
+  width: 200px;
+  border: 2px solid #ea3057;
+  background-color: #ea3057;
   border-radius: 10px;
   color: #fff;
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .contact-heading button:hover {
-  border-color: #1b1c25;
-  color: #1b1c25;
-  background-color: #fff;
+  background-color: #9fd2cb;
+  border-color: #9fd2cb;
+  color: #191919;
 }
 
 .contact-info-box {
@@ -1333,7 +1443,7 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 550px;
+  height: 500px;
   width: 750px;
   margin-top: 2rem;
 }
@@ -1352,11 +1462,10 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 50vh;
 }
 
 .contact-form form label {
-  border: 2px solid #1b1c25;
+  border: 2px solid #fff;
   border-right: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -1370,18 +1479,18 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .contact-form form label i {
-  color: #1b1c25;
+  color: #ea3057;
 }
 
 .contact-form form input {
   background-color: transparent;
-  color: #191919;
-  border: 2px solid #1b1c25;
+  color: #fff;
+  border: 2px solid #fff;
   border-top-right-radius: 10px;
   border-top-left-radius: 0;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 0;
-  border-bottom: 2px solid #1b1c25;
+  border-bottom: 2px solid #fff;
   width: 500px;
   padding: 1rem;
   margin-bottom: 2rem;
@@ -1390,20 +1499,20 @@ div#staticBackdrop.modal.fade.show {
 
 .contact-form form input:focus,
 .contact-form form input:active {
-  border: 2px solid #1b1c25 !important;
-  outline: #1b1c25;
+  border: 2px solid #fff !important;
+  outline: #fff;
 }
 
 .contact-form form textarea:focus,
 .contact-form form textarea:active {
-  border: 2px solid #1b1c25 !important;
-  outline: #1b1c25;
+  border: 2px solid #fff !important;
+  outline: #fff;
 }
 
 .contact-form form textarea {
   background-color: transparent;
-  color: #1b1c25;
-  border: 2px solid #1b1c25;
+  color: #fff;
+  border: 2px solid #fff;
   border-radius: 10px;
   max-width: 555px;
   width: 555px;
@@ -1420,25 +1529,25 @@ div#staticBackdrop.modal.fade.show {
 
 .contact-form form input::-webkit-input-placeholder,
 .contact-form form textarea::-webkit-input-placeholder {
-  color: #1b1c25;
+  color: #9fd2cb;
   font-size: 1rem;
 }
 
 .contact-form form input:-ms-input-placeholder,
 .contact-form form textarea:-ms-input-placeholder {
-  color: #1b1c25;
+  color: #9fd2cb;
   font-size: 1rem;
 }
 
 .contact-form form input::-ms-input-placeholder,
 .contact-form form textarea::-ms-input-placeholder {
-  color: #1b1c25;
+  color: #9fd2cb;
   font-size: 1rem;
 }
 
 .contact-form form input::placeholder,
 .contact-form form textarea::placeholder {
-  color: #1b1c25;
+  color: #9fd2cb;
   font-size: 1rem;
 }
 
@@ -1458,17 +1567,19 @@ div#staticBackdrop.modal.fade.show {
 .contact-form-button button {
   width: 200px;
   padding: 1rem;
-  border: 2px solid #1b1c25;
-  color: #1b1c25;
-  background-color: transparent;
+  border: 2px solid #ea3057;
+  background-color: #ea3057;
+  color: #fff;
   border-radius: 10px;
   margin-bottom: 2rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .contact-form-button button:hover {
-  border: 2px solid #1b1c25;
-  background-color: #1b1c25;
-  color: #fff;
+  border: 2px solid #9fd2cb;
+  background-color: #9fd2cb;
+  color: #191919;
 }
 
 /* ----- CONTACT PAGE STYLING END ----- */
