@@ -64,31 +64,18 @@
                 <li class="links"><a href="#about">About</a></li>
 
                 <li class="links"><a href="#portfolio">Portfolio</a></li>
+
+                <li class="links"><a href="#contact">Contact</a></li>
+
               </ul>
             </div>
 
             <div class="nav-buttons">
               <ul>
                 <li>
-                  <button
-                    class="nav-contact"
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
-                  >
-                    Contact Me
-                  </button>
-                </li>
-
-                <li>
-                  <button
-                    class="nav-download"
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
-                  >
+                  <a class="nav-download">
                     Download CV
-                  </button>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -139,82 +126,6 @@
       </div>
     </div>
   </header>
-
-  <!-- Contact Form Modal -->
-  <div
-    class="modal fade"
-    id="staticBackdrop"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
-    tabindex="-1"
-    aria-labelledby="staticBackdropLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel"></h5>
-          <button
-            type="button"
-            class="modal-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          >
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="col-12">
-            <div class="contact-form-box">
-              <h3>Contact Me</h3>
-              <h4>Let's work together on your next project!</h4>
-
-              <div class="contact-form">
-                <form id="contact-form">
-                  <div>
-                    <label for="name"><i class="fas fa-user"></i></label
-                    ><input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Name*"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label for="email"><i class="fas fa-envelope"></i></label
-                    ><input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="Email Address*"
-                      required
-                    />
-                  </div>
-
-                  <div class="textarea-input">
-                    <label for="message"><i class="fas fa-pen"></i></label
-                    ><textarea
-                      id="message"
-                      name="message"
-                      rows="5"
-                      placeholder="Type Your Message Here..."
-                      required
-                    ></textarea>
-                  </div>
-
-                  <div class="contact-form-button">
-                    <button type="submit">Submit</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <body>
 
@@ -639,26 +550,87 @@
       </section>
 
       <section id="contact">
-        <div class="container-fluid">
+        <div class="container">
           <div class="row">
             <div class="col-12">
               <div class="contact-heading">
                 <h1>CONTACT ME</h1>
 
                 <h5>LET'S WORK TOGETHER</h5>
+              </div>
+            </div>
 
-                <h6>
-                  Have a project in mind? Drop me a message and lets get
-                  started
-                </h6>
+            <div class="col-12">
+              <div class="contact-form-box">
 
-                <button
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
-                >
-                  Hire Me
-                </button>
+                <div class="contact-form-text">
+                  <h4>Drop me a message</h4>
+
+                  <p>Fill in the contact form to get in touch</p>
+
+                  <h5>OR</h5>
+
+                  <p>You can contact me directly:</p>
+                  
+                  <a href="mailto:benpruden34@gmail.com"><i class="fa-solid fa-envelope"></i> benpruden34@gmail.com</a>
+
+                  <ul>
+                    <li>
+                      <a href="https://github.com/BenPruden97" target="_blank">
+                        <i class="fa-brands fa-github-square"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/ben-pruden/"
+                        target="_blank"
+                        ><i class="fa-brands fa-linkedin"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="contact-form">
+                  <form id="contact-form">
+                    <div>
+                      <label for="name"><i class="fas fa-user"></i></label
+                      ><input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Name"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label for="email"
+                        ><i class="fas fa-envelope"></i></label
+                      ><input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Email Address"
+                        required
+                      />
+                    </div>
+
+                    <div class="textarea-input">
+                      <label for="message"><i class="fas fa-pen"></i></label
+                      ><textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Type Your Message Here..."
+                        required
+                      ></textarea>
+                    </div>
+
+                    <div class="contact-form-button">
+                      <button type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
