@@ -277,6 +277,16 @@ header {
 }
 
 .nav-download {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
   background-color: #9fd2cb;
   border: none;
   border-radius: 10px;
@@ -472,12 +482,12 @@ div#staticBackdrop.modal.fade.show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -592,9 +602,7 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .about-content-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -687,7 +695,7 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .icon {
-  width: 200px;
+  width: 30%;
   margin: 0 0.25rem;
   color: #ea3057;
   background-color: #191919;
@@ -1021,7 +1029,6 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 2rem;
   margin-bottom: 3rem;
 }
 
@@ -1346,7 +1353,7 @@ div#staticBackdrop.modal.fade.show {
   content: "";
   display: block;
   position: absolute;
-  top: 110px;
+  top: 100px;
   left: 0;
   width: 50%;
   height: 5px;
@@ -1357,7 +1364,7 @@ div#staticBackdrop.modal.fade.show {
   content: "";
   display: block;
   position: absolute;
-  top: 110px;
+  top: 100px;
   right: 0;
   width: 50%;
   height: 5px;
@@ -1674,6 +1681,20 @@ footer p {
 
 /* ----- FOOTER STYLING END ----- */
 @media screen and (max-width: 1400px) {
+  .home-info h4 {
+    font-size: 1.75rem;
+  }
+  .home-info h1 {
+    height: 100px;
+    font-size: 5.5rem;
+  }
+  .home-info h3 {
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+  }
+  .home-info a {
+    height: 60px;
+  }
   .project-card-1 {
     -webkit-box-flex: 1000;
         -ms-flex: 1000;
@@ -1736,6 +1757,36 @@ footer p {
 }
 
 @media screen and (max-width: 1200px) {
+  .logo a {
+    font-size: 1.5rem;
+  }
+  .nav-links ul li,
+  .nav-buttons ul li {
+    width: 125px;
+  }
+  .nav-links ul li a,
+  .nav-buttons ul li a {
+    width: 125px;
+    font-size: 1rem;
+  }
+  .nav-links ul li a:hover::before,
+  .nav-buttons ul li a:hover::before {
+    width: 125px;
+  }
+  .nav-links ul li a:hover::after,
+  .nav-buttons ul li a:hover::after {
+    width: 125px;
+  }
+  .icon {
+    width: 29%;
+  }
+  .icon-icon {
+    font-size: 3rem;
+  }
+  .icon-text {
+    font-size: 0.9rem;
+    padding-bottom: 1.75rem;
+  }
   .contact-form #contact-form input {
     background-color: #333;
     border-top: none;
@@ -1768,20 +1819,34 @@ footer p {
   }
   .nav-links ul li,
   .nav-buttons ul li {
-    width: 75px;
+    width: 100px;
   }
   .nav-links ul li a,
   .nav-buttons ul li a {
-    width: 75px;
+    width: 100px;
     font-size: 0.9rem;
   }
   .nav-links ul li a:hover::before,
   .nav-buttons ul li a:hover::before {
-    width: 75px;
+    width: 100px;
   }
   .nav-links ul li a:hover::after,
   .nav-buttons ul li a:hover::after {
-    width: 75px;
+    width: 100px;
+  }
+  .home-info h4 {
+    font-size: 1.5rem;
+  }
+  .home-info h1 {
+    height: 75px;
+    font-size: 4.5rem;
+  }
+  .home-info h3 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+  .home-info a {
+    height: 55px;
   }
   /* ----- About Page Styling ----- */
   .about-content {
@@ -1823,12 +1888,12 @@ footer p {
   }
   .project-info-1,
   .project-info-2 {
-    padding: 1rem;
+    padding: 1.5rem 2rem;
     height: 300px;
   }
   .project-info-1 h3,
   .project-info-2 h3 {
-    margin-top: 0.9rem;
+    margin-top: 0.5rem;
     font-size: 1.5rem;
   }
   .project-info-1 h6,
@@ -1916,8 +1981,11 @@ footer p {
 
 @media screen and (max-width: 768px) {
   .logo {
-    margin-top: 1.5rem;
-    padding-left: 1.5rem;
+    margin-top: 0rem;
+    padding-left: 0rem;
+  }
+  .logo a {
+    font-size: 1.5rem;
   }
   .navigation-menu {
     display: -webkit-box;
@@ -1933,7 +2001,7 @@ footer p {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    height: 75px;
+    height: 100px;
     z-index: 3;
   }
   .nav-links,
@@ -1961,8 +2029,8 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    top: 15px;
-    right: 30px;
+    top: 30px;
+    right: 60px;
     background-color: transparent;
     border: 1px solid #191919;
     border-radius: 5px;
@@ -2021,7 +2089,8 @@ footer p {
   }
   .burger-menu-section {
     position: fixed;
-    top: 75px;
+    top: 100px;
+    left: 0;
     display: none;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2034,7 +2103,7 @@ footer p {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
-    background-color: #191919;
+    background-color: #333;
     z-index: 5;
   }
   .burger-menu-section .nav-links {
@@ -2097,32 +2166,12 @@ footer p {
         -ms-flex-align: center;
             align-items: center;
     text-decoration: none;
+    background-color: #191919;
     color: #fff;
     height: 50px;
     width: 90%;
     font-size: 1.1rem;
-    border: 1px solid #ea3057;
     z-index: 1;
-  }
-  .burger-menu-section .nav-links ul li a::before {
-    content: "";
-    display: block;
-    position: absolute;
-    border: none;
-    left: 5%;
-    height: 50px;
-    width: 0;
-  }
-  .burger-menu-section .nav-links ul li a:hover::before {
-    content: "";
-    display: block;
-    height: 50px;
-    width: 90%;
-    -webkit-transition: ease 0.25s;
-    transition: ease 0.25s;
-    border: none;
-    background-color: #ea3057;
-    z-index: -1;
   }
   .burger-menu-section .nav-links ul li a::after,
   .burger-menu-section .nav-links ul li a:hover::after {
@@ -2139,7 +2188,7 @@ footer p {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     padding-left: 0;
   }
   .burger-menu-section .nav-buttons ul {
@@ -2189,11 +2238,11 @@ footer p {
         -ms-flex-align: center;
             align-items: center;
     text-decoration: none;
-    color: #fff;
+    border-radius: 0;
+    color: #191919;
     height: 50px;
     width: 90%;
     font-size: 1.1rem;
-    border: 1px solid #ea3057;
   }
   .burger-menu-section .nav-buttons ul li a:hover {
     color: #fff;
@@ -2330,18 +2379,76 @@ footer p {
 }
 
 @media screen and (max-width: 576px) {
+  header {
+    height: 60px;
+  }
+  .logo {
+    height: 60px;
+  }
+  .logo a {
+    height: 60px;
+    padding-left: 1rem;
+  }
   .burger-menu {
     height: 775px;
   }
+  .burger-menu-section {
+    top: 60px;
+  }
+  .burger-menu-icon {
+    top: 7.5px;
+    right: 30px;
+  }
+  .burger-menu-section .nav-links {
+    padding-top: 0.5rem;
+  }
+  .burger-menu-section .nav-links ul li {
+    margin: 0.25rem 0;
+    height: 40px;
+  }
+  .burger-menu-section .nav-links ul li a,
+  .burger-menu-section .nav-buttons ul li a {
+    height: 40px;
+  }
+  .burger-menu-section .nav-buttons ul li {
+    margin: 0.25rem 0;
+    height: 40px;
+  }
   #home {
-    height: 1000px;
+    height: 825px;
+  }
+  #about {
+    padding-top: 3rem;
+  }
+  .about-heading h1 {
+    font-size: 2.5rem;
+  }
+  .about-heading h5 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .about-heading h1::before,
+  .about-heading h1::after {
+    top: 100px;
   }
   .home-section {
     height: 650px;
   }
-  .home-info h1,
+  .home-info h4 {
+    font-size: 1.1rem;
+  }
+  .home-info h1 {
+    height: 50px;
+    font-size: 2.5rem;
+  }
   .home-info h3 {
+    margin-bottom: 0.75rem;
     font-size: 1.5rem;
+  }
+  .home-info a {
+    height: 40px;
+    width: 150px;
+    font-size: 1rem;
   }
   /* ----- About Page Styling ----- */
   .offer {
@@ -2423,6 +2530,27 @@ footer p {
     padding: 0.25rem 0;
   }
   /* ----- Portfolio Page ----- */
+  #portfolio {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .portfolio-heading {
+    margin-bottom: 1.5rem;
+  }
+  .portfolio-heading h1 {
+    font-size: 2.5rem;
+  }
+  .portfolio-heading h5 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .portfolio-heading h1::before,
+  .portfolio-heading h1::after {
+    top: 100px;
+  }
+  .project-row {
+    margin: 1rem 2rem;
+  }
   .project-card-1,
   .project-card-2 {
     -webkit-box-orient: vertical;
@@ -2502,8 +2630,23 @@ footer p {
     font-size: 0.75rem;
   }
   /* ----- Contact Page Styling ----- */
+  #contact {
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+  }
   .contact-heading {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+  }
+  .contact-heading h1 {
+    font-size: 2.5rem;
+  }
+  .contact-heading h5 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .contact-heading h1::before,
+  .contact-heading h1::after {
+    top: 100px;
   }
   .contact-heading h6 {
     font-size: 1rem;
@@ -2564,7 +2707,7 @@ footer p {
     margin-top: 0;
   }
   .contact-form-box h4 {
-    margin-top: 3rem;
+    margin-top: 0.5rem;
   }
   .contact-form {
     width: 100%;
@@ -2606,7 +2749,42 @@ footer p {
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 425px) {
+  header {
+    height: 100px;
+  }
+  .logo {
+    height: 100px;
+  }
+  .logo a {
+    height: 100px;
+    padding-left: 1rem;
+  }
+  .burger-menu {
+    height: 775px;
+  }
+  .burger-menu-section {
+    top: 100px;
+  }
+  .burger-menu-icon {
+    top: 30px;
+    right: 30px;
+  }
+  .burger-menu-section .nav-links {
+    padding-top: 1.2rem;
+  }
+  .burger-menu-section .nav-links ul li {
+    margin: 0.5rem 0;
+    height: 50px;
+  }
+  .burger-menu-section .nav-links ul li a,
+  .burger-menu-section .nav-buttons ul li a {
+    height: 50px;
+  }
+  .burger-menu-section .nav-buttons ul li {
+    margin: 0.5rem 0;
+    height: 50px;
+  }
   .about-content {
     padding: 1rem;
     margin-top: 1.5rem;
