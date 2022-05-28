@@ -428,16 +428,13 @@ div#staticBackdrop.modal.fade.show {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  margin-top: 4rem;
-  padding: 5rem;
-  padding-left: 0rem;
   padding-right: 5rem;
 }
 
 .about-image {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   padding-top: 3rem;
 }
 
@@ -445,23 +442,21 @@ div#staticBackdrop.modal.fade.show {
   height: 450px;
 }
 
-.about-content h4 {
-  color: #ea3057;
+.about-content h3 {
+  color: #9fd2cb;
   padding-bottom: 0.5rem;
 }
 
 .about-content p {
-  color: #191919;
-}
-
-.about-content span {
-  color: #ea3057;
+  color: #fff;
+  margin-bottom: 0;
 }
 
 .about-content-buttons {
-  display: none;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .about-content-buttons ul {
@@ -476,40 +471,62 @@ div#staticBackdrop.modal.fade.show {
   margin-right: 1.5rem;
 }
 
-.about-content-buttons ul li button {
-  height: 75px;
-  width: 100px;
-  text-decoration: none;
-  color: #191919;
-  border: 2px solid #191919;
-  padding: 1rem;
-  border-radius: 5px;
-  text-align: center;
-}
-
 .about-content-buttons ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 75px;
-  width: 100px;
+  width: 150px;
   text-decoration: none;
+  background-color: #9fd2cb;
   color: #191919;
-  border: 2px solid #191919;
-  padding: 1rem;
+  border: 2px solid #9fd2cb;
   border-radius: 5px;
   text-align: center;
 }
 
-.about-content-buttons a:hover,
-.about-content-buttons button:hover {
+.about-content-buttons a:hover {
   border: 2px solid #191919;
   background-color: #191919;
-  color: #fff;
+  color: #ea3057;
 }
 
 .about-content-buttons i {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  padding-bottom: 0.15rem;
+}
+
+.goals {
+  margin-top: 5.5rem;
+}
+
+.goals ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.goals ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 125px;
+  width: 175px;
+  border-radius: 5px;
+  border: 2px solid #191919;
+  background-color: #191919;
+  list-style-type: none;
+  margin-right: 1.5rem;
+}
+
+.goals ul li i {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  color: #ea3057;
 }
 
 /* ----- ABOUT PAGE STYLING END ----- */
@@ -864,7 +881,7 @@ div#staticBackdrop.modal.fade.show {
 
 .project-info-1 {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   background-color: transparent;
@@ -887,7 +904,7 @@ div#staticBackdrop.modal.fade.show {
 
 .project-info-2 {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   background-color: transparent;
@@ -927,7 +944,6 @@ div#staticBackdrop.modal.fade.show {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1.5rem;
 }
 
 .project-info-1 .info-text {
@@ -1038,7 +1054,7 @@ div#staticBackdrop.modal.fade.show {
   content: "";
   display: block;
   position: absolute;
-  top: 100px;
+  top: 110px;
   left: 0;
   width: 50%;
   height: 5px;
@@ -1049,7 +1065,7 @@ div#staticBackdrop.modal.fade.show {
   content: "";
   display: block;
   position: absolute;
-  top: 100px;
+  top: 110px;
   right: 0;
   width: 50%;
   height: 5px;
@@ -1702,7 +1718,7 @@ footer p {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    background-color: #333;
+    background-color: #ea3057;
     z-index: 5;
   }
 
@@ -1984,24 +2000,6 @@ footer p {
     height: 825px;
   }
 
-  #about {
-    padding-top: 3rem;
-  }
-
-  .about-heading h1 {
-    font-size: 2.5rem;
-  }
-
-  .about-heading h5 {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-  }
-
-  .about-heading h1::before,
-  .about-heading h1::after {
-    top: 100px;
-  }
-
   .home-section {
     height: 650px;
   }
@@ -2032,38 +2030,41 @@ footer p {
     padding-top: 110px;
   }
 
-  .offer {
-    flex-direction: column;
-    margin-top: 0;
+  .about-heading h1 {
+    font-size: 2rem;
   }
 
-  .offer-card {
-    height: 100px;
-    width: 275px;
-    margin: 0.5rem 0;
-  }
-
-  .uxi img {
-    height: 50px !important;
-    padding-top: 0.5rem;
-  }
-
-  .responsive img {
-    height: 70px !important;
-    padding-top: 0.25rem;
-  }
-
-  .responsive h6 {
-    padding-top: 0.5rem !important;
-  }
-
-  .offer-card img {
-    height: 55px;
-    padding-top: 0.5rem;
-  }
-
-  .offer-card h6 {
+  .about-heading h5 {
     font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-heading h1::before,
+  .about-heading h1::after {
+    top: 80px;
+  }
+
+  .about-content {
+    padding: 0;
+  }
+
+  .about-content-buttons {
+    width: 100%;
+  }
+
+  .about-content-buttons ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-content-buttons ul li {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .about-content-buttons ul li a {
+    width: 100%;
+    margin: 0;
   }
 
   /* ----- Skills Page Styling ----- */
@@ -2074,7 +2075,7 @@ footer p {
   }
 
   .icon {
-    width: 25%;
+    width: 30%;
   }
 
   .icon-icon {
@@ -2139,17 +2140,17 @@ footer p {
   }
 
   .portfolio-heading h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .portfolio-heading h5 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
   }
 
   .portfolio-heading h1::before,
   .portfolio-heading h1::after {
-    top: 100px;
+    top: 80px;
   }
 
   .project-row {
@@ -2244,21 +2245,21 @@ footer p {
 
   .contact-heading {
     padding-top: 0;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
 
   .contact-heading h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .contact-heading h5 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
   }
 
   .contact-heading h1::before,
   .contact-heading h1::after {
-    top: 100px;
+    top: 80px;
   }
 
   .contact-heading h6 {
@@ -2362,8 +2363,7 @@ footer p {
   }
 
   .about-content {
-    padding: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
   }
 
   .about-content-buttons {

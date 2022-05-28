@@ -565,9 +565,6 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 4rem;
-  padding: 5rem;
-  padding-left: 0rem;
   padding-right: 5rem;
 }
 
@@ -575,12 +572,12 @@ div#staticBackdrop.modal.fade.show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding-top: 3rem;
 }
 
@@ -588,27 +585,27 @@ div#staticBackdrop.modal.fade.show {
   height: 450px;
 }
 
-.about-content h4 {
-  color: #ea3057;
+.about-content h3 {
+  color: #9fd2cb;
   padding-bottom: 0.5rem;
 }
 
 .about-content p {
-  color: #191919;
-}
-
-.about-content span {
-  color: #ea3057;
+  color: #fff;
+  margin-bottom: 0;
 }
 
 .about-content-buttons {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 1rem;
 }
 
 .about-content-buttons ul {
@@ -629,17 +626,6 @@ div#staticBackdrop.modal.fade.show {
   margin-right: 1.5rem;
 }
 
-.about-content-buttons ul li button {
-  height: 75px;
-  width: 100px;
-  text-decoration: none;
-  color: #191919;
-  border: 2px solid #191919;
-  padding: 1rem;
-  border-radius: 5px;
-  text-align: center;
-}
-
 .about-content-buttons ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -650,25 +636,76 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 75px;
-  width: 100px;
+  width: 150px;
   text-decoration: none;
+  background-color: #9fd2cb;
   color: #191919;
-  border: 2px solid #191919;
-  padding: 1rem;
+  border: 2px solid #9fd2cb;
   border-radius: 5px;
   text-align: center;
 }
 
-.about-content-buttons a:hover,
-.about-content-buttons button:hover {
+.about-content-buttons a:hover {
   border: 2px solid #191919;
   background-color: #191919;
-  color: #fff;
+  color: #ea3057;
 }
 
 .about-content-buttons i {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  padding-bottom: 0.15rem;
+}
+
+.goals {
+  margin-top: 5.5rem;
+}
+
+.goals ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.goals ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 125px;
+  width: 175px;
+  border-radius: 5px;
+  border: 2px solid #191919;
+  background-color: #191919;
+  list-style-type: none;
+  margin-right: 1.5rem;
+}
+
+.goals ul li i {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  color: #ea3057;
 }
 
 /* ----- ABOUT PAGE STYLING END ----- */
@@ -1140,9 +1177,9 @@ div#staticBackdrop.modal.fade.show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1172,9 +1209,9 @@ div#staticBackdrop.modal.fade.show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1225,7 +1262,6 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 1.5rem;
 }
 
 .project-info-1 .info-text {
@@ -1353,7 +1389,7 @@ div#staticBackdrop.modal.fade.show {
   content: "";
   display: block;
   position: absolute;
-  top: 100px;
+  top: 110px;
   left: 0;
   width: 50%;
   height: 5px;
@@ -1364,7 +1400,7 @@ div#staticBackdrop.modal.fade.show {
   content: "";
   display: block;
   position: absolute;
-  top: 100px;
+  top: 110px;
   right: 0;
   width: 50%;
   height: 5px;
@@ -2064,7 +2100,7 @@ footer p {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
-    background-color: #333;
+    background-color: #ea3057;
     z-index: 5;
   }
   .burger-menu-section .nav-links {
@@ -2376,20 +2412,6 @@ footer p {
   #home {
     height: 825px;
   }
-  #about {
-    padding-top: 3rem;
-  }
-  .about-heading h1 {
-    font-size: 2.5rem;
-  }
-  .about-heading h5 {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-  }
-  .about-heading h1::before,
-  .about-heading h1::after {
-    top: 100px;
-  }
   .home-section {
     height: 650px;
   }
@@ -2413,35 +2435,37 @@ footer p {
   #about {
     padding-top: 110px;
   }
-  .offer {
+  .about-heading h1 {
+    font-size: 2rem;
+  }
+  .about-heading h5 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .about-heading h1::before,
+  .about-heading h1::after {
+    top: 80px;
+  }
+  .about-content {
+    padding: 0;
+  }
+  .about-content-buttons {
+    width: 100%;
+  }
+  .about-content-buttons ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 0;
+    width: 100%;
   }
-  .offer-card {
-    height: 100px;
-    width: 275px;
-    margin: 0.5rem 0;
+  .about-content-buttons ul li {
+    width: 100%;
+    margin-bottom: 1rem;
   }
-  .uxi img {
-    height: 50px !important;
-    padding-top: 0.5rem;
-  }
-  .responsive img {
-    height: 70px !important;
-    padding-top: 0.25rem;
-  }
-  .responsive h6 {
-    padding-top: 0.5rem !important;
-  }
-  .offer-card img {
-    height: 55px;
-    padding-top: 0.5rem;
-  }
-  .offer-card h6 {
-    font-size: 1rem;
+  .about-content-buttons ul li a {
+    width: 100%;
+    margin: 0;
   }
   /* ----- Skills Page Styling ----- */
   .icon-container {
@@ -2449,7 +2473,7 @@ footer p {
     gap: 0;
   }
   .icon {
-    width: 25%;
+    width: 30%;
   }
   .icon-icon {
     height: 50px;
@@ -2500,15 +2524,15 @@ footer p {
     margin-bottom: 1.5rem;
   }
   .portfolio-heading h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .portfolio-heading h5 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
   }
   .portfolio-heading h1::before,
   .portfolio-heading h1::after {
-    top: 100px;
+    top: 80px;
   }
   .project-row {
     margin: 1rem 2rem;
@@ -2599,18 +2623,18 @@ footer p {
   }
   .contact-heading {
     padding-top: 0;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
   .contact-heading h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .contact-heading h5 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
   }
   .contact-heading h1::before,
   .contact-heading h1::after {
-    top: 100px;
+    top: 80px;
   }
   .contact-heading h6 {
     font-size: 1rem;
@@ -2706,8 +2730,7 @@ footer p {
     height: 50px;
   }
   .about-content {
-    padding: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
   }
   .about-content-buttons {
     -webkit-box-orient: vertical;
