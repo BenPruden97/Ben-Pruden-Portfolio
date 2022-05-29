@@ -473,9 +473,9 @@ div#staticBackdrop.modal.fade.show {
 /* ----- HOME PAGE STYLING END ----- */
 /* ----- ABOUT PAGE STYLING START ----- */
 #about {
-  padding-top: 6.5rem;
+  padding-top: 8rem;
   background: #333;
-  padding-bottom: 3rem;
+  padding-bottom: 11rem;
 }
 
 .about-heading {
@@ -502,7 +502,7 @@ div#staticBackdrop.modal.fade.show {
 
 .about-heading h5 {
   color: #ea3057;
-  margin-bottom: 4rem;
+  margin-bottom: 9rem;
 }
 
 .about-heading h1::before {
@@ -565,7 +565,7 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-right: 5rem;
+  padding-right: 3rem;
 }
 
 .about-image {
@@ -587,7 +587,13 @@ div#staticBackdrop.modal.fade.show {
 
 .about-content h3 {
   color: #9fd2cb;
+  text-transform: uppercase;
   padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.about-content a {
+  color: #fff;
 }
 
 .about-content p {
@@ -605,7 +611,8 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .about-content-buttons ul {
@@ -708,15 +715,18 @@ div#staticBackdrop.modal.fade.show {
   color: #ea3057;
 }
 
+.skills-section h3 {
+  margin-top: 1.8rem;
+  color: #9fd2cb;
+  text-transform: uppercase;
+}
+
 /* ----- ABOUT PAGE STYLING END ----- */
 /* ----- SKILLS PAGE STYLING START ----- */
 .icon-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -732,7 +742,7 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .icon {
-  width: 30%;
+  width: 29%;
   margin: 0 0.25rem;
   color: #ea3057;
   background-color: #191919;
@@ -1359,7 +1369,7 @@ div#staticBackdrop.modal.fade.show {
 #contact {
   padding-top: 4rem;
   background-color: #333;
-  padding-bottom: 6rem;
+  padding-bottom: 10rem;
 }
 
 .contact-heading {
@@ -1376,7 +1386,8 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
 }
 
 .contact-heading h1 {
@@ -1851,7 +1862,7 @@ footer p {
   /* ----- About Page Styling ----- */
   .about-content {
     margin-top: 4rem;
-    padding: 0 0 0 2rem;
+    padding: 0;
   }
   /* ----- Skills Page Styling ----- */
   .icon {
@@ -2608,13 +2619,13 @@ footer p {
   .project-info-1 .info-buttons a {
     width: 115px;
     padding: 0.5rem;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     margin-right: 0.5rem;
   }
   .project-info-2 .info-buttons a {
     width: 115px;
     padding: 0.5rem;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
   /* ----- Contact Page Styling ----- */
   #contact {
