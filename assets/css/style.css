@@ -474,7 +474,7 @@ div#staticBackdrop.modal.fade.show {
 /* ----- ABOUT PAGE STYLING START ----- */
 #about {
   padding-top: 8rem;
-  background: #333;
+  background: #191919;
   padding-bottom: 11rem;
 }
 
@@ -492,6 +492,7 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 9rem;
 }
 
 .about-heading h1 {
@@ -502,7 +503,6 @@ div#staticBackdrop.modal.fade.show {
 
 .about-heading h5 {
   color: #ea3057;
-  margin-bottom: 9rem;
 }
 
 .about-heading h1::before {
@@ -745,7 +745,7 @@ div#staticBackdrop.modal.fade.show {
   width: 29%;
   margin: 0 0.25rem;
   color: #ea3057;
-  background-color: #191919;
+  background-color: #333;
   border-radius: 10px;
 }
 
@@ -1076,7 +1076,7 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 
 .portfolio-heading h1 {
@@ -1368,7 +1368,7 @@ div#staticBackdrop.modal.fade.show {
 /* ----- CONTACT PAGE STYLING START ----- */
 #contact {
   padding-top: 4rem;
-  background-color: #333;
+  background-color: #191919;
   padding-bottom: 10rem;
 }
 
@@ -1476,8 +1476,8 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #191919;
-  border-right: 2px solid #333;
+  background-color: #333;
+  border-right: 2px solid #191919;
   height: 600px;
   width: 600px;
   margin-top: 2rem;
@@ -1544,9 +1544,16 @@ div#staticBackdrop.modal.fade.show {
   height: 60px;
   width: 60px;
   font-size: 1.2rem;
-  background-color: #333;
+  background-color: #191919;
+  border: 2px solid #191919;
   text-decoration: none;
   color: #fff;
+}
+
+.contact-form-text ul li a:hover {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #191919;
 }
 
 .contact-form {
@@ -1554,7 +1561,7 @@ div#staticBackdrop.modal.fade.show {
   width: 100%;
   margin-top: 2rem;
   padding: 4rem 8rem 4rem;
-  background-color: #191919;
+  background-color: #333;
 }
 
 .contact-form #contact-form .contact-field {
@@ -1565,7 +1572,7 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .contact-form #contact-form label {
-  background-color: #333;
+  background-color: #191919;
   border: none;
   height: 56px;
   width: 55px;
@@ -1585,11 +1592,11 @@ div#staticBackdrop.modal.fade.show {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  background-color: #333;
+  background-color: #191919;
   border-top: none;
   border-bottom: none;
   border-right: none;
-  border-left: 2px solid #191919;
+  border-left: 2px solid #333;
   color: #fff;
   width: 100%;
   padding: 1rem;
@@ -1602,7 +1609,7 @@ div#staticBackdrop.modal.fade.show {
   border-top: none;
   border-bottom: none;
   border-right: none;
-  border-left: 2px solid #191919;
+  border-left: 2px solid #333;
   outline: none;
 }
 
@@ -1613,7 +1620,7 @@ div#staticBackdrop.modal.fade.show {
 }
 
 .contact-form #contact-form textarea {
-  background-color: #333;
+  background-color: #191919;
   color: #fff;
   border: none;
   max-width: 100%;
@@ -1670,8 +1677,8 @@ div#staticBackdrop.modal.fade.show {
 .contact-form-button button {
   width: 200px;
   padding: 1rem;
-  border: 2px solid #333;
-  background-color: #333;
+  border: 2px solid #191919;
+  background-color: #191919;
   color: #fff;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -1690,8 +1697,8 @@ div#staticBackdrop.modal.fade.show {
 /* ----- CONTACT PAGE STYLING END ----- */
 /* ----- FOOTER STYLING START ----- */
 footer {
-  background-color: #191919;
-  border-bottom: 2px solid #191919;
+  background-color: #333;
+  border-bottom: 2px solid #333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1971,7 +1978,7 @@ footer p {
     height: 950px;
   }
   .contact-form-text {
-    background-color: #191919;
+    background-color: #333;
     border-right: none;
     border-bottom: 2px solid #333;
     height: 400px;
@@ -2307,7 +2314,7 @@ footer p {
   .project-info-1,
   .project-info-2 {
     padding: 1rem;
-    height: 300px;
+    height: 350px;
   }
   .project-info-1::before,
   .project-info-2::before {
@@ -2335,7 +2342,6 @@ footer p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 200px;
     font-size: 1.1rem;
   }
   .project-info-1 .info-text p,
@@ -2567,7 +2573,7 @@ footer p {
   .project-info-1,
   .project-info-2 {
     position: relative;
-    height: 250px;
+    height: 300px;
     width: 300px;
     padding: 0.5rem;
   }
@@ -2676,7 +2682,7 @@ footer p {
   .contact-form #contact-form textarea {
     padding-top: 0.5rem;
     padding-left: 0.5rem;
-    height: 100px;
+    height: 150px;
     margin-bottom: 1rem;
   }
   .contact-form #contact-form input::-webkit-input-placeholder,
